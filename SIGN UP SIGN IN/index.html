@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Đăng Nhập</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameuser">
+                        <i class='bx bxs-user' ></i>
+                        <input type="text" placeholder="Tên Đăng Nhập" required>
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-envelope'></i>
+                        <input type="email" placeholder="Địa chỉ gmail" required>
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-lock-alt' ></i>
+                        <input type="password" placeholder="Mật Khẩu" required>
+                    </div>
+                   <div class="forgot-pass">
+                    <p>Quên mật khẩu? <a href="">CLICK!</a></p>
+                   </div>
+                </div>       
+            <div class="btn">
+                <button type="button" id="signupbtn">Đăng Nhập</button>
+                <button type="button" id="signinbtn" class="disable">Đăng Ký</button>
+            </div>        
+            </form>
+        </div>
+    </div>
+<script>
+    let signupbtn = document.getElementById("signupbtn")
+    let signinbtn = document.getElementById("signinbtn")
+    let nameuser = document.getElementById("nameuser")
+    let tile = document.getElementById("tile")
+    let forgot = document.getElementById("forgot-pass")
+
+
+    signinbtn.onclick = function(){
+        nameuser.style.maxHeight = "0";
+        title.innerHTML = "Đăng Ký";
+        signupbtn.classList.add("disable");
+        signinbtn.classList.remove("disable");
+    } 
+    signupbtn.onclick = function(){
+        nameuser.style.maxHeight = "65px";
+        title.innerHTML = "Đăng Nhập";
+        signinbtn.classList.add("disable");
+        signupbtn.classList.remove("disable");
+    }
+
+
+
+</script>
+
+</body>
+</html>
